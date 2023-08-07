@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Mouse Handling Events</title>
+        <script>
+            function bigImg(x) {
+              x.style.height = "256px";
+              x.style.width = "256px";
+            }
+            
+            function normalImg(x) {
+              x.style.height = "128px";
+              x.style.width = "128px";
+            }
+            function mouseDown() {
+                document.getElementById("Adi").style.color = "red";
+            }
+            function mouseUp() {
+                document.getElementById("Adi").style.color = "green";
+            }
+        </script>
+    </head>
+    <body>
+        <p>Onclick() - </p>
+        <button type = "button" onclick="this.innerHTML = 'Hi!!'">Click here!</button>
+        <p>Onmouseover() & Onmouseout() - </p>
+        <img onmouseover="bigImg(this)" onmouseout="normalImg(this)" src="pic1.jpg" alt="Scenary" width="20%" height="20%">
+        <p>Onmouseup() and Onmousedown()</p> 
+        <p id = "Adi" onmouseup="mouseUp()" onmousedown="mouseDown()">Click the text!</p> 
+    </body>
+</html>
